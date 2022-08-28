@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Charles_Assignment1
 {
-    internal class Process
+    public class Process
     {
+        public double area(double height, double width) {
+            double result = height * width;
+            return result;
+        }
+
+        public double perimiter(double height, double width) { 
+            double result = (width * 2) + (height * 2);
+            return result;
+        }
     }
 }
