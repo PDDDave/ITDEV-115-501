@@ -11,12 +11,17 @@ namespace Charles_Assignment1
     {
         public void Welcome() {
             String intro = "Welcome to Rec - count!\n" +
-                "Please follow the prompts in order to enter the dimensions of your rectangle to find the area and perimiter.";
+                "Please follow the prompts in order to enter the dimensions of your rectangle to find the area and perimiter.\n" +
+                "Press any key to continue...";
 
             DisplayInfo("1");
             Console.WriteLine(Title());
             Console.WriteLine(intro);
             Console.ReadKey();
+        }
+
+        public void lineBreak() {
+            Console.WriteLine("\n");
         }
 
         public void displayResult(double result, string label) {

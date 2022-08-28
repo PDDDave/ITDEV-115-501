@@ -11,8 +11,10 @@ void startMission()
     double height;
     
     v.Welcome();
+    v.lineBreak();
     height = v.GetDimension("hieght");
     width = v.GetDimension("width");
+    v.lineBreak();
     v.displayResult(p.area(height, width),"area");
     v.displayResult(p.perimiter(height, width), "perimiter");
 }
