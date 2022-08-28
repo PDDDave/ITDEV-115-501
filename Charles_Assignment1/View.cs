@@ -20,11 +20,11 @@ namespace Charles_Assignment1
             Console.ReadKey();
         }
 
-        public void lineBreak() {
+        public void LineBreak() {
             Console.WriteLine("\n");
         }
 
-        public void displayResult(double result, string label) {
+        public void DisplayResult(double result, string label) {
             String m = "The " + label + " of your rectangle is " + result +".";
             Console.WriteLine(m);
         }
