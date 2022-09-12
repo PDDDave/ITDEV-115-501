@@ -55,14 +55,15 @@ namespace Charles_Assignment2
         }
 
         public string formattedOutput() {
-            string m = 
-                "Name:\t\t\t" + firstName + " " + lastName + "\n\n" +
-                "Gross Income: \t\t" + monthlySales + "\n" +
-                "Federal Income Tax Witheld: \t\t" + fedTaxPaid + "\n" +
-                "Social Security Tax Witheld: \t\t" + socTaxPaid + "\n" +
-                "Retirement Contribution: \t\t" + retireHeld + "\n" +
+            string m =
+                "\n\nName:\t\t\t" + firstName + " " + lastName + "\n\n" +
+                "Total Sales:\t\t\t\t" + monthlySales.ToString("C2") + "\n" +
+                "Gross Income: \t\t\t\t" + commissionedIncome.ToString("C2") + "\n" +
+                "Federal Income Tax Witheld: \t\t" + fedTaxPaid.ToString("C2") + "\n" +
+                "Social Security Tax Witheld: \t\t" + socTaxPaid.ToString("C2") + "\n" +
+                "Retirement Contribution: \t\t" + retireHeld.ToString("C2") + "\n" +
                 "_________________________________________________________________\n" +
-                "Net Income: \t\t\t" + (commissionedIncome - (fedTaxPaid + socTaxPaid + retireHeld)) + "\n";
+                "Net Income: \t\t\t\t" + (commissionedIncome - (fedTaxPaid + socTaxPaid + retireHeld)).ToString("C2") + "\n";
 
             return m;
         }
