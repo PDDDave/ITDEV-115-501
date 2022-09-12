@@ -29,6 +29,7 @@ void mainGo()
 
     //output
     v.printString(employee.formattedOutput());
+    v.inString();
 }
 
 void calculate()
