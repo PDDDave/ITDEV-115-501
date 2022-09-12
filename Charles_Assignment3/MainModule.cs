@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using Charles_Assignment3;
+
+missionLaunch();
+
+void missionLaunch()
+{
+    BMIUI controller = new BMIUI();
+
+    controller.BMIMain();
+}

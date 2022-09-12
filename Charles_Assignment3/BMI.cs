@@ -26,6 +26,30 @@ namespace Charles_Assignment3
             BodyMassIndex = (WeightPounds / (HeightInches * HeightInches)) * 703.0;
         }
 
+        public override string ToString()
+        {
+            string result;
+            switch (BodyMassIndex) {
+                case   >= 30:
+                    result = "Obese";
+                    break;
+                case >= 25:
+                    result = "Overweight";
+                    break;
+                case >= 18.5:
+                    result = "Normal";
+                    break;
+                default:
+                    result = "Underweight";
+                    break;
+            }
+            string message = "\n\nYour weight is " + WeightPounds +" pounds.\n" +
+                "Your height is " + HeightInches + " inches.\n" +
+                "Your body mass index result is: " + result;
+
+            return message;
+        }
+
 
     }
 }
