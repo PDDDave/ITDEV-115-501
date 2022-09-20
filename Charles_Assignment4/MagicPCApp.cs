@@ -5,5 +5,5 @@ missionStart();
 
 void missionStart()
 {
-    ui.welcome();
+    ui.Welcome();
 }

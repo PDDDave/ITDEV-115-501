@@ -9,7 +9,7 @@ namespace Charles_Assignment4
 {
     internal class MagicPCUI
     {
-        internal void welcome()
+        internal void Welcome()
         {
             MagicPC magicPC = new MagicPC();
             Info info = new Info();
@@ -19,11 +19,11 @@ namespace Charles_Assignment4
             string answer;
 
             info.DisplayInfo("Assignment 4");
-            printWelcome();
+            PrintWelcome();
 
             do {
-                directions();
-                input = getInput();
+                Directions();
+                input = GetInput();
                 if (input != null)
                 {
                     answer = magicPC.GetUserAnswer();
@@ -32,7 +32,7 @@ namespace Charles_Assignment4
                 else { cont = false;  }
             } while (cont);
 
-            exit();
+            Exit();
         }
 
         private void PrintResult(string question, string answer)
@@ -41,7 +41,7 @@ namespace Charles_Assignment4
             Console.WriteLine("Magical response: \t" + answer);
         }
 
-        private string getInput()
+        private string GetInput()
         {
             string result;
             string inString = Console.ReadLine();
@@ -55,13 +55,13 @@ namespace Charles_Assignment4
             return result;
         }
 
-        private void exit()
+        private void Exit()
         {
             Console.WriteLine("Magic must recharge, come back later!");
             Environment.Exit(0);
         }
 
-        private void printWelcome()
+        private void PrintWelcome()
         {
             string ball = "        ____\r\n    ,dP9CGG88@b,\r\n  ,IP  _   Y888@@b,\r\n dIi  (_)   G8888@b\r\ndCII  (_)   G8888@@b\r\nGCCIi     ," +
                 "GG8888@@@\r\nGGCCCCCCCGGG88888@@@\r\nGGGGCCCGGGG88888@@@@...\r\nY8GGGGGG8888888@@@@P.....\r\n Y88888888888@@@@@P......\r\n `Y8888888@@@@@@@P" +
@@ -81,7 +81,7 @@ namespace Charles_Assignment4
             Console.WriteLine(ball);
         }
 
-        private void directions()
+        private void Directions()
         {
             Console.WriteLine("\n\nEnter your question to consult the MagicPC, or enter a blank to exit:");
         }
