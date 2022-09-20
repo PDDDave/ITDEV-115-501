@@ -12,9 +12,13 @@ namespace Charles_Assignment4
         internal void welcome()
         {
             MagicPC magicPC = new MagicPC();
+            Info info = new Info();
+
             bool cont = true;
             string input = null;
             string answer;
+
+            info.DisplayInfo("Assignment 4");
             printWelcome();
 
             do {
@@ -42,7 +46,7 @@ namespace Charles_Assignment4
             string result;
             string inString = Console.ReadLine();
 
-            if (inString.Length > 1)
+            if (inString.Length > 0)
             {
                 result = inString;
             }
@@ -73,8 +77,6 @@ namespace Charles_Assignment4
                 "                                                                                                                             " +
                 " \r\n";
 
-
-            Console.WriteLine("Welcome to Magic PC!");
             Console.WriteLine(title);
             Console.WriteLine(ball);
         }
