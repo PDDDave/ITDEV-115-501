@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Charles_Assignment4;
+
+MagicPCUI ui = new MagicPCUI();
+missionStart();
+
+void missionStart()
+{
+    ui.welcome();
+}
