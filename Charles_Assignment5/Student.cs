@@ -21,21 +21,26 @@ namespace Charles_Assignment5
         public double CalculateAvg() {
             double avg = 0;
             double accumulator = 0;
-            int i = 0;
+            
             foreach (int hour in hours) {
-                accumulator += hours[i];
-                i++;
+                accumulator += hour;
             }
             
             return accumulator / hours.Length;
         }
 
-        public void EnterHours() {
-            
+        public void EnterHours(string[] days) {
+            int i = 0;
+            foreach (double hour in hours)
+            {
+                Console.WriteLine("Enter hours studied on " + days[i] + ":");
+                hours[i] = int.Parse(Console.ReadLine());
+                i++;
+            }
         }
 
         public void GetNumberHours() {
-
+            //not sure what function is supposed to go to this method.
         }
 
 

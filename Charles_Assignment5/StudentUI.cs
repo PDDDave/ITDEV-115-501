@@ -62,13 +62,9 @@ namespace Charles_Assignment5
         }
 
         public void FillHours() {
-            int i = 0;
-            foreach (double hour in student.hours) {
-                WriteLine("Enter hours studied on " + days[i] + ":");
-                student.hours[i] = int.Parse(ReadLine());
-                i++;
-            }
+            student.EnterHours(days);
         }
+
         private void DisplayTitle() {
             string title = "\r\n __ _             _            _     __ _             _           _               \r\n/ _\\ |_ _" +
                 "   _  __| | ___ _ __ | |_  / _\\ |_ _   _  __| |_   _    /_\\  _ __  _ __  \r\n\\ \\| __| | | |/ _` |/ _ \\ '_ \\|" +
