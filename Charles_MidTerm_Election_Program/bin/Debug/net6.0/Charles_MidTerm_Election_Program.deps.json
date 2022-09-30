@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Charles_MidTerm_Election_Program/1.0.0": {
+        "runtime": {
+          "Charles_MidTerm_Election_Program.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Charles_MidTerm_Election_Program/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
