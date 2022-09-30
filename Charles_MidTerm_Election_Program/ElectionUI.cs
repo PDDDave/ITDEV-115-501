@@ -8,5 +8,14 @@ namespace Charles_MidTerm_Election_Program
 {
     internal class ElectionUI
     {
+        Election theElection = new Election();
+
+        public void MainMethod() { 
+        
+        }
+
+        public void DisplayResults() { 
+        
+        }
     }
 }
