@@ -30,10 +30,10 @@ namespace Charles_MidTerm_Election_Program
 
         public int FindWinner() {
             int winner = 0;
-            int highest = 0;
+            int highest = votes[0];
 
             for (int i = 0; i < votes.Length; i++) {
-                highest = votes[i];
+                
                 if (votes[i] > highest) {
                     winner = i;
                     highest = votes[i];
