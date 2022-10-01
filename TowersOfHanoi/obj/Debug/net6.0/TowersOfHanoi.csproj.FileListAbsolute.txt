@@ -1,0 +1,15 @@
+F:\Code\School\MATC\itdev115\TowersOfHanoi\bin\Debug\net6.0\TowersOfHanoi.exe
+F:\Code\School\MATC\itdev115\TowersOfHanoi\bin\Debug\net6.0\TowersOfHanoi.deps.json
+F:\Code\School\MATC\itdev115\TowersOfHanoi\bin\Debug\net6.0\TowersOfHanoi.runtimeconfig.json
+F:\Code\School\MATC\itdev115\TowersOfHanoi\bin\Debug\net6.0\TowersOfHanoi.dll
+F:\Code\School\MATC\itdev115\TowersOfHanoi\bin\Debug\net6.0\TowersOfHanoi.pdb
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.csproj.AssemblyReference.cache
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.AssemblyInfoInputs.cache
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.AssemblyInfo.cs
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.csproj.CoreCompileInputs.cache
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.dll
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\refint\TowersOfHanoi.dll
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.pdb
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\TowersOfHanoi.genruntimeconfig.cache
+F:\Code\School\MATC\itdev115\TowersOfHanoi\obj\Debug\net6.0\ref\TowersOfHanoi.dll
