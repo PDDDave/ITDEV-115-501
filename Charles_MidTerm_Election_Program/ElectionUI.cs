@@ -15,12 +15,25 @@ namespace Charles_MidTerm_Election_Program
         public void MainMethod() {
             info.DisplayInfo("MidTerm App - Election Program");
             LoadData();
-            WriteLine(theElection.GetCandidateName(theElection.FindWinner()));
-            WriteLine(theElection.GetCandidateVotes(theElection.FindWinner()));
+            Clear();
+            DisplayResults();
+            ReadLine();
         }
 
-        public void DisplayResults() { 
-        
+        public void DisplayResults() {
+            string line = "------------------------------------------------------";
+            string heading = "\tName\tVotes\tPercentage";
+            double percent = 0.0;
+
+            WriteLine(heading);
+            WriteLine(line);
+            for(int i = 0; i < theElection.GetNumCandidates(); i++) {
+                percent = ((double)theElection.GetCandidateVotes(i) / theElection.TotalVotes());
+                WriteLine("\t{0} \t\t {1} \t\t {2}", theElection.GetCandidateName(i), theElection.GetCandidateVotes(i), percent.ToString("P1"));
+                //WriteLine("\t" + theElection.GetCandidateName(i) +"\t"+ theElection.GetCandidateVotes(i) + "\t" + (theElection.TotalVotes() / theElection.GetNumCandidates()));    
+            }
+
+            WriteLine("\nThe winner is {0}!", theElection.GetCandidateName(theElection.FindWinner()));
         }
 
         private void LoadData() {
