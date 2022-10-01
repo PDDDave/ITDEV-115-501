@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Charles_MidTerm_Election_Program;
+
+ElectionUI ui = new ElectionUI();
+ui.MainMethod();
+
+
