@@ -19,11 +19,12 @@ namespace Charles_Assignment6
             info.DisplayInfo("Assignment 6");
             Title();
             Instructions();
-            Continue();
+            WriteLine();
+            Enter();
         }
 
         private void Ferry(string choice, ArrayList bank, string currentBank, string otherBank) {
-            WriteLine("Moving " + choice + " from " + currentBank + " to " + otherBank);
+            WriteLine("Moving the " + choice + " from " + currentBank + " to " + otherBank);
         }
 
         public void PlayerChoice(ArrayList northBank, ArrayList southBank) {
@@ -38,7 +39,7 @@ namespace Charles_Assignment6
                 currentBank = "south bank";
                 otherBank = "north bank";
             }
-            WriteLine("What should the Farmer take with him from the" + currentBank + " to the " + otherBank + "?:");
+            WriteLine("What should the Farmer take with him from the " + currentBank + " to the " + otherBank + "?:");
             choice = ReadLine();
             choice = choice.ToLower();
 
@@ -97,9 +98,40 @@ namespace Charles_Assignment6
             BackgroundColor= ConsoleColor.Black;
         }
 
-        public void Continue() {
+        public void ClearScreen() {
+            Clear();
+        }
+        public void Enter() { 
             WriteLine("Press enter to continue...");
-            ReadLine();        
+            ReadLine();  
+        }
+
+        public char Continue() {
+            string answer = "";
+            char ans;
+            bool cont = true;
+
+            do {
+                WriteLine("Would you like to play again? Y|N ");
+                answer = ReadLine();
+                ans = answer.ToLower()[0];
+
+                switch (ans) { 
+                    case 'y':
+                        cont = false; 
+                        break;
+
+                    case 'n':
+                        cont = false;
+                        break;
+                    default:
+                        WriteLine("Unknown Response");
+                        break;
+                }
+            } while(cont);
+            
+
+            return ans;
         }
 
         private void Instructions() {
@@ -110,7 +142,7 @@ namespace Charles_Assignment6
             WriteLine(instructions);
         }
 
-        private void Title() {
+        public void Title() {
             string title = "\r\n  ___                          ___ _    _    _              ___           ___          _      " +
                 "\r\n | __|_ _ _ _ _ __  ___ _ _   / __| |_ (_)__| |_____ _ _   | __|____ __  / __|_ _ __ _(_)_ _  \r\n | _/ _` |" +
                 " '_| '  \\/ -_) '_| | (__| ' \\| / _| / / -_) ' \\  | _/ _ \\ \\ / | (_ | '_/ _` | | ' \\ \r\n |_|\\__,_|_| |_|_" +

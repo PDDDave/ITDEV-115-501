@@ -19,15 +19,19 @@ namespace Charles_Assignment6
 
         public void StartGame() {
             ui.Welcome();
-            ui.DisplayScreen(northBank, southBank);
-            Console.ReadLine();
-            ui.PlayerChoice(northBank, southBank);
-            Console.ReadLine();
+            //ui.DisplayScreen(northBank, southBank);
+            //ui.Enter();
 
-           /* do {
+           do {
+                ui.ClearScreen();
+                ui.Title();
                 ui.DisplayScreen(northBank, southBank);
-                GameOver();
-            }while(cont) */
+                ui.PlayerChoice(northBank, southBank);
+                ui.Enter();
+                ui.Continue();
+
+                //GameOver();
+            }while(cont);
         }
 
         private void GameOver() {
