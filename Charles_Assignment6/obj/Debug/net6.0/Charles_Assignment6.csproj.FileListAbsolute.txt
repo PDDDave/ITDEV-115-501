@@ -1,0 +1,15 @@
+C:\Code\ITDEV-115-501\Charles_Assignment6\bin\Debug\net6.0\Charles_Assignment6.exe
+C:\Code\ITDEV-115-501\Charles_Assignment6\bin\Debug\net6.0\Charles_Assignment6.deps.json
+C:\Code\ITDEV-115-501\Charles_Assignment6\bin\Debug\net6.0\Charles_Assignment6.runtimeconfig.json
+C:\Code\ITDEV-115-501\Charles_Assignment6\bin\Debug\net6.0\Charles_Assignment6.dll
+C:\Code\ITDEV-115-501\Charles_Assignment6\bin\Debug\net6.0\Charles_Assignment6.pdb
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.csproj.AssemblyReference.cache
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.AssemblyInfoInputs.cache
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.AssemblyInfo.cs
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.csproj.CoreCompileInputs.cache
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.dll
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\refint\Charles_Assignment6.dll
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.pdb
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\Charles_Assignment6.genruntimeconfig.cache
+C:\Code\ITDEV-115-501\Charles_Assignment6\obj\Debug\net6.0\ref\Charles_Assignment6.dll
