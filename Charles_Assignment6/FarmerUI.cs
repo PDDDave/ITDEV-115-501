@@ -23,45 +23,16 @@ namespace Charles_Assignment6
             Enter();
         }
 
-        private void Ferry(string choice, ArrayList bank, string currentBank, string otherBank) {
-            WriteLine("Moving the " + choice + " from " + currentBank + " to " + otherBank);
+        public string InString() {
+            string inString = ReadLine();
+            return inString;
         }
 
-        public void PlayerChoice(ArrayList northBank, ArrayList southBank) {
-            string choice = "";
-            string currentBank = ""; //true == north, false ==south
-            string otherBank = "";
-
-            if (northBank.Contains("farmer")) { 
-                currentBank = "north bank";
-                otherBank = "south bank";
-            } else { 
-                currentBank = "south bank";
-                otherBank = "north bank";
-            }
-            WriteLine("What should the Farmer take with him from the " + currentBank + " to the " + otherBank + "?:");
-            choice = ReadLine();
-            choice = choice.ToLower();
-
-            if (currentBank.Equals("north bank")) { //north=true
-                if (northBank.Contains(choice)) {
-                    Ferry(choice, northBank, currentBank, otherBank);
-                } else {
-                    WriteLine(System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(choice)
-                        + " is not on this side of the river.");
-                }
-            }
-            else {
-                if (southBank.Contains(choice)) { 
-                    Ferry(choice, southBank, currentBank, otherBank);
-                } else { 
-                    WriteLine(System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(choice)
-                        + " is not on this side of the river.");                    
-                }
-            }
-
-
+        public void PrintString(string msg) { 
+            WriteLine(msg);
         }
+
+
 
         public void DisplayScreen(ArrayList northBank, ArrayList southBank) {
             string nBank = "";
@@ -104,34 +75,6 @@ namespace Charles_Assignment6
         public void Enter() { 
             WriteLine("Press enter to continue...");
             ReadLine();  
-        }
-
-        public char Continue() {
-            string answer = "";
-            char ans;
-            bool cont = true;
-
-            do {
-                WriteLine("Would you like to play again? Y|N ");
-                answer = ReadLine();
-                ans = answer.ToLower()[0];
-
-                switch (ans) { 
-                    case 'y':
-                        cont = false; 
-                        break;
-
-                    case 'n':
-                        cont = false;
-                        break;
-                    default:
-                        WriteLine("Unknown Response");
-                        break;
-                }
-            } while(cont);
-            
-
-            return ans;
         }
 
         private void Instructions() {
