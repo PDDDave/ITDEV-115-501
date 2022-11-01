@@ -36,6 +36,7 @@ namespace Charles_Assignment6
             Continue();
         }
 
+
         private char Continue() {
             string answer = "";
             char ans;
@@ -68,7 +69,35 @@ namespace Charles_Assignment6
             return ans;
         }
 
-        private void Ferry(string choice, ArrayList bank, string currentBank, string otherBank) {
+        private void MoveFarmer(string choice, string currentBank, string otherBank) { 
+            if (currentBank.Equals("north bank")){ 
+                northBank.Remove(choice);
+
+                southBank.Add(choice);
+            }else { 
+                southBank.Remove(choice);
+
+                northBank.Add(choice);
+            }
+
+            ui.PrintString("Moving the " + choice + " from " + currentBank + " to " + otherBank);
+        }
+
+        private void Ferry(string choice, string currentBank, string otherBank) {
+            if (currentBank.Equals("north bank")){ 
+                northBank.Remove("farmer");
+                northBank.Remove(choice);
+
+                southBank.Add("farmer");
+                southBank.Add(choice);
+            }else { 
+                southBank.Remove("farmer");
+                southBank.Remove(choice);
+
+                northBank.Add("farmer");
+                northBank.Add(choice);
+            }
+
             ui.PrintString("Moving the " + choice + " from " + currentBank + " to " + otherBank);
         }
 
@@ -89,23 +118,29 @@ namespace Charles_Assignment6
             choice = choice.ToLower();
 
             if (currentBank.Equals("north bank")) { //north=true
-                if (northBank.Contains(choice)) {
-                    Ferry(choice, northBank, currentBank, otherBank);
+                if ( northBank.Contains(choice)) {
+                    if (choice.Equals("farmer")) {
+                        MoveFarmer(choice, currentBank, otherBank);
+                    }else { 
+                        Ferry(choice, currentBank, otherBank);
+                    }
                 } else {
                     ui.PrintString(System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(choice)
                         + " is not on this side of the river.");
                 }
             }
             else {
-                if (southBank.Contains(choice)) { 
-                    Ferry(choice, southBank, currentBank, otherBank);
+                if (southBank.Contains(choice)) {
+                    if (choice.Equals("farmer")) {
+                        MoveFarmer(choice, currentBank, otherBank);
+                    }else { 
+                        Ferry(choice, currentBank, otherBank);
+                    }
                 } else { 
                     ui.PrintString(System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(choice)
                         + " is not on this side of the river.");                   
                 }
             }
-
-
         }
 
     }
