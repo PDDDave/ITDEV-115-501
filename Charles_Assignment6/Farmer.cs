@@ -11,16 +11,12 @@ namespace Charles_Assignment6
     {
         FarmerUI ui = new FarmerUI();
         private bool cont = true;
-        private bool eaten = false;
-        private bool accross = false;
         private ArrayList northBank = new ArrayList() { "farmer", "fox", "chicken", "grain"};
         private ArrayList southBank = new ArrayList();
 
 
         public void StartGame() {
             ui.Welcome();
-            //ui.DisplayScreen(northBank, southBank);
-            //ui.Enter();
 
            do {
                 ui.ClearScreen();
@@ -28,12 +24,60 @@ namespace Charles_Assignment6
                 ui.DisplayScreen(northBank, southBank);
                 PlayerChoice();
                 ui.Enter();
+                CheckBanks();
 
 
             }while(cont);
 
             //play again
             Continue();
+        }
+
+        private void ResetBanks() { 
+            northBank.Clear();
+            southBank.Clear();
+
+            northBank.Add("farmer");
+            northBank.Add("fox");
+            northBank.Add("chicken");
+            northBank.Add("grain");
+        }
+
+        private void CheckBanks() { 
+            //Check if fox eats chicken
+            if( ( northBank.Contains("fox") && northBank.Contains("chicken") && !northBank.Contains("farmer") ) 
+                || ( southBank.Contains("fox") && southBank.Contains("chicken") && !southBank.Contains("farmer")  )) {
+            
+                ui.Title();
+                ui.DisplayScreen(northBank, southBank);
+                ui.GotAte("fox", "chicken");
+                
+                Continue();
+            }
+
+            //check if chicken eats grain
+
+            if (( northBank.Contains("chicken") && northBank.Contains("grain") && !northBank.Contains("farmer") ) 
+                || ( southBank.Contains("chicken") && southBank.Contains("grain") && !southBank.Contains("farmer")  )) { 
+
+                ui.Title();
+                ui.DisplayScreen(northBank, southBank);
+                ui.GotAte("chicken", "grain");
+                
+                Continue();            
+            }
+
+            //check for win condition
+            if ( northBank.Count < 1) {
+                ui.ClearScreen();
+                ui.Title();
+                ui.DisplayScreen(northBank, southBank);
+                ui.YouWin();
+                System.Threading.Thread.Sleep(1000);
+                ui.PrintString("\n\nAfter a long day of moving cargo across the creek, the farmer heads home to continue his quest of raising foxes and chickens.");
+                System.Threading.Thread.Sleep(1000);
+                Continue();
+            }
         }
 
 
@@ -43,12 +87,13 @@ namespace Charles_Assignment6
             bool cont = true;
 
             do {
-                ui.PrintString("Would you like to play again? Y|N ");
+                ui.PrintString("\nWould you like to play again? Y|N ");
                 answer = ui.InString();
                 ans = answer.ToLower()[0];
 
                 switch (ans) { 
                     case 'y':
+                        ResetBanks();
                         cont = false; 
                         break;
 
@@ -80,7 +125,7 @@ namespace Charles_Assignment6
                 northBank.Add(choice);
             }
 
-            ui.PrintString("Moving the " + choice + " from " + currentBank + " to " + otherBank);
+            ui.PrintString("\nMoving the " + choice + " from " + currentBank + " to " + otherBank);
         }
 
         private void Ferry(string choice, string currentBank, string otherBank) {
@@ -98,7 +143,7 @@ namespace Charles_Assignment6
                 northBank.Add(choice);
             }
 
-            ui.PrintString("Moving the " + choice + " from " + currentBank + " to " + otherBank);
+            ui.PrintString("\nMoving the " + choice + " from " + currentBank + " to " + otherBank);
         }
 
         private void PlayerChoice() {
