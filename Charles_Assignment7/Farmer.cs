@@ -29,15 +29,15 @@ namespace Charles_Assignment7
 
             return disableGroup;
         }
-        private void CheckBanks()
+        public String CheckBanks()
         {
-
+            String msg ="";
             
             //Check if fox eats chicken
             if ((northBank.Contains("fox") && northBank.Contains("chicken") && !northBank.Contains("farmer"))
                 || (southBank.Contains("fox") && southBank.Contains("chicken") && !southBank.Contains("farmer")))
             {
-
+                msg = "chicken";
 
             }
 
@@ -46,16 +46,17 @@ namespace Charles_Assignment7
             if ((northBank.Contains("chicken") && northBank.Contains("grain") && !northBank.Contains("farmer"))
                 || (southBank.Contains("chicken") && southBank.Contains("grain") && !southBank.Contains("farmer")))
             {
-
+                msg = "grain";
             }
 
             //check for win condition
             if (northBank.Count < 1)
             {
-
+                msg = "win";
             }
-        }
 
+            return msg;
+        }
 
     }
 }

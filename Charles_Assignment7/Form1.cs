@@ -44,8 +44,35 @@ namespace Charles_Assignment7
 
         private void northFarmerBtn_Click(object sender, EventArgs e)
         {
+            String checkBanks = game.CheckBanks();
+
+            switch (checkBanks) {
+                case "chicken":
+                    GotAte("fox", "chicken");
+                    break;
+                case "grain":
+                    GotAte("chicken", "grain");
+                    break;
+                case "win":
+                    MessageBox.Show("You Win!", "Congrats!!!\nWould you like to play again?",
+                        MessageBoxButtons.YesNo);
+                    break;
+            }
+
+
             DisableGroup();
+            
         }
+
+        private void GotAte(string devourer, string devouree)
+        {
+            String title = "Game Over!";
+            String msg = "Oh no! The " + devourer + " has devoured the " + devouree + "!\nWould you like to play again?";
+            MessageBox.Show(
+                msg,title,
+                MessageBoxButtons.YesNo);
+        }
+
 
         private void DisableGroup()
         {
@@ -61,3 +88,5 @@ namespace Charles_Assignment7
         }
     }
 }
+
+
