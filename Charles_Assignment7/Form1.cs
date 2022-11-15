@@ -5,6 +5,7 @@ namespace Charles_Assignment7
     public partial class Form1 : Form
     {
         Farmer game = new Farmer();
+        GuiInfo info = new GuiInfo();
         
 
 
@@ -33,7 +34,7 @@ namespace Charles_Assignment7
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            instructionLbl.Text = "The farmer must get his fox, chicken, and grain across the river from the NORTH BANK to the SOUTH BANK." +
+             instructionLbl.Text = "The farmer must get his fox, chicken, and grain across the river from the NORTH BANK to the SOUTH BANK." +
             "\nThe farmer can make the trip carying only one thing with him at a time.\nChoose which item you want the farmer to carry with him, and get " +
             "all three across safley!";
 
@@ -463,6 +464,15 @@ namespace Charles_Assignment7
             game.SetBank();
             DisableGroup();
             CheckButtons();
+        }
+
+        private void infoBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                info.DisplayInfo("Assignment 7"),
+                "GuiInfo.cs",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }

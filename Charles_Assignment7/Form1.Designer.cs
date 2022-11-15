@@ -48,6 +48,7 @@
             this.southGrainBtn = new System.Windows.Forms.Button();
             this.southChickenBtn = new System.Windows.Forms.Button();
             this.southFarmerBtn = new System.Windows.Forms.Button();
+            this.infoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northChicken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.southGrain)).BeginInit();
@@ -279,12 +280,23 @@
             this.southFarmerBtn.UseVisualStyleBackColor = true;
             this.southFarmerBtn.Click += new System.EventHandler(this.southFarmerBtn_Click);
             // 
+            // infoBtn
+            // 
+            this.infoBtn.Location = new System.Drawing.Point(328, 585);
+            this.infoBtn.Name = "infoBtn";
+            this.infoBtn.Size = new System.Drawing.Size(84, 23);
+            this.infoBtn.TabIndex = 17;
+            this.infoBtn.Text = "Information";
+            this.infoBtn.UseVisualStyleBackColor = true;
+            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1206, 610);
+            this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.southBankGoupBx);
             this.Controls.Add(this.northBankGroupBx);
             this.Controls.Add(this.instructionLbl);
@@ -339,5 +351,6 @@
         private Button southFarmerBtn;
         private Button southFoxBtn;
         private Button southGrainBtn;
+        private Button infoBtn;
     }
 }
