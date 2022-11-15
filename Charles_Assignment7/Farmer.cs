@@ -9,10 +9,10 @@ namespace Charles_Assignment7
 {
     internal class Farmer
     {
-        private ArrayList northBank = new ArrayList() { "farmer", "fox", "chicken", "grain" };
-        private ArrayList southBank = new ArrayList();
-        private String currentBank { get; set; }
-        private String otherBank { get; set; }
+        public ArrayList northBank = new ArrayList() { "farmer", "fox", "chicken", "grain" };
+        public ArrayList southBank = new ArrayList();
+        public String CurrentBank { get; set; }
+        public String OtherBank { get; set; }
 
 
         public bool CheckControlls() {
@@ -33,7 +33,7 @@ namespace Charles_Assignment7
         }
 
         public void MoveFarmer(string choice) {
-            if (currentBank.Equals("north bank"))
+            if (CurrentBank.Equals("north bank"))
             {
                 northBank.Remove(choice);
                 southBank.Add(choice);
@@ -44,7 +44,7 @@ namespace Charles_Assignment7
             }
         }
         public void Ferry(string choice) {
-            if (currentBank.Equals("north bank"))
+            if (CurrentBank.Equals("north bank"))
             {
                 northBank.Remove("farmer");
                 northBank.Remove(choice);
@@ -62,17 +62,17 @@ namespace Charles_Assignment7
             }
         }
 
-        public void CurrentBank()
+        public void SetBank()
         {
             if (northBank.Contains("farmer"))
             {
-                currentBank = "north bank";
-                otherBank = "south bank";
+                CurrentBank = "north bank";
+                OtherBank = "south bank";
             }
             else
             {
-                currentBank = "south bank";
-                otherBank = "north bank";
+                CurrentBank = "south bank";
+                OtherBank = "north bank";
             }
         }
 
@@ -103,6 +103,17 @@ namespace Charles_Assignment7
             }
 
             return msg;
+        }
+
+        public void ResetBanks()
+        {
+            northBank.Clear();
+            southBank.Clear();
+
+            northBank.Add("farmer");
+            northBank.Add("fox");
+            northBank.Add("chicken");
+            northBank.Add("grain");
         }
 
     }

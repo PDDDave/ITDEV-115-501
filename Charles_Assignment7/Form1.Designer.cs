@@ -203,6 +203,7 @@
             this.northFoxBtn.TabIndex = 13;
             this.northFoxBtn.Text = "Fox";
             this.northFoxBtn.UseVisualStyleBackColor = true;
+            this.northFoxBtn.Click += new System.EventHandler(this.northFoxBtn_Click);
             // 
             // northGrainBtn
             // 
@@ -212,6 +213,7 @@
             this.northGrainBtn.TabIndex = 13;
             this.northGrainBtn.Text = "Grain";
             this.northGrainBtn.UseVisualStyleBackColor = true;
+            this.northGrainBtn.Click += new System.EventHandler(this.northGrainBtn_Click);
             // 
             // northChickenBtn
             // 
@@ -221,6 +223,7 @@
             this.northChickenBtn.TabIndex = 11;
             this.northChickenBtn.Text = "Chicken";
             this.northChickenBtn.UseVisualStyleBackColor = true;
+            this.northChickenBtn.Click += new System.EventHandler(this.northChickenBtn_Click);
             // 
             // southBankGoupBx
             // 
@@ -244,6 +247,7 @@
             this.southFoxBtn.TabIndex = 13;
             this.southFoxBtn.Text = "Fox";
             this.southFoxBtn.UseVisualStyleBackColor = true;
+            this.southFoxBtn.Click += new System.EventHandler(this.southFoxBtn_Click);
             // 
             // southGrainBtn
             // 
@@ -253,7 +257,7 @@
             this.southGrainBtn.TabIndex = 14;
             this.southGrainBtn.Text = "Grain";
             this.southGrainBtn.UseVisualStyleBackColor = true;
-            this.southGrainBtn.Click += new System.EventHandler(this.button2_Click);
+            this.southGrainBtn.Click += new System.EventHandler(this.southGrainBtn_Click);
             // 
             // southChickenBtn
             // 
@@ -263,6 +267,7 @@
             this.southChickenBtn.TabIndex = 15;
             this.southChickenBtn.Text = "Chicken";
             this.southChickenBtn.UseVisualStyleBackColor = true;
+            this.southChickenBtn.Click += new System.EventHandler(this.southChickenBtn_Click);
             // 
             // southFarmerBtn
             // 
@@ -272,6 +277,7 @@
             this.southFarmerBtn.TabIndex = 16;
             this.southFarmerBtn.Text = "Farmer";
             this.southFarmerBtn.UseVisualStyleBackColor = true;
+            this.southFarmerBtn.Click += new System.EventHandler(this.southFarmerBtn_Click);
             // 
             // Form1
             // 
