@@ -1,8 +1,13 @@
+using Microsoft.VisualBasic;
+
 namespace Charles_Assignment7
 {
     public partial class Form1 : Form
     {
         Farmer game = new Farmer();
+        
+
+
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +49,14 @@ namespace Charles_Assignment7
 
         private void northFarmerBtn_Click(object sender, EventArgs e)
         {
+            var result = DialogResult;
+
+            //change farmer
+            game.CurrentBank();
+            game.MoveFarmer("farmer");
+            northFarmer.Hide();
+            southFarmer.Show();
+
             String checkBanks = game.CheckBanks();
 
             switch (checkBanks) {
@@ -54,25 +67,52 @@ namespace Charles_Assignment7
                     GotAte("chicken", "grain");
                     break;
                 case "win":
-                    MessageBox.Show("You Win!", "Congrats!!!\nWould you like to play again?",
+                    result = MessageBox.Show("You Win!", "Congrats!!!\nWould you like to play again?",
                         MessageBoxButtons.YesNo);
+                    EndGame(result);
+                    break;
+                default:
+                    MessageBox.Show("Working!");
                     break;
             }
-
 
             DisableGroup();
             
         }
 
-        private void GotAte(string devourer, string devouree)
+        private void ResetGame()
         {
-            String title = "Game Over!";
-            String msg = "Oh no! The " + devourer + " has devoured the " + devouree + "!\nWould you like to play again?";
-            MessageBox.Show(
-                msg,title,
-                MessageBoxButtons.YesNo);
+            //clear the screen
+            MessageBox.Show("Cleared Game");
         }
 
+        private void GotAte(string devourer, string devouree)
+        {
+            var result = DialogResult;
+
+            String title = "Game Over!";
+            String msg = "Oh no! The " + devourer + " has devoured the " + devouree + "!\nWould you like to play again?";
+            result = MessageBox.Show(
+                msg,title,
+                MessageBoxButtons.YesNo);
+            EndGame(result);
+
+        }
+
+        private void EndGame(DialogResult result)
+        {
+            if (result == DialogResult.Yes)
+            {
+                ResetGame();
+            }
+            else
+            {
+                MessageBox.Show("Thanks for playing!  Your game will now exit.",
+                    "Farmer: Chicken, Grain, Fox", MessageBoxButtons.OK);
+
+                System.Windows.Forms.Application.ExitThread();
+            }
+        }
 
         private void DisableGroup()
         {

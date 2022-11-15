@@ -11,6 +11,8 @@ namespace Charles_Assignment7
     {
         private ArrayList northBank = new ArrayList() { "farmer", "fox", "chicken", "grain" };
         private ArrayList southBank = new ArrayList();
+        private String currentBank { get; set; }
+        private String otherBank { get; set; }
 
 
         public bool CheckControlls() {
@@ -29,6 +31,51 @@ namespace Charles_Assignment7
 
             return disableGroup;
         }
+
+        public void MoveFarmer(string choice) {
+            if (currentBank.Equals("north bank"))
+            {
+                northBank.Remove(choice);
+                southBank.Add(choice);
+            }
+            else { 
+                southBank.Remove(choice);
+                northBank.Add(choice);
+            }
+        }
+        public void Ferry(string choice) {
+            if (currentBank.Equals("north bank"))
+            {
+                northBank.Remove("farmer");
+                northBank.Remove(choice);
+
+                southBank.Add("farmer");
+                southBank.Add(choice);
+            }
+            else
+            {
+                southBank.Remove("farmer");
+                southBank.Remove(choice);
+
+                northBank.Add("farmer");
+                northBank.Add(choice);
+            }
+        }
+
+        public void CurrentBank()
+        {
+            if (northBank.Contains("farmer"))
+            {
+                currentBank = "north bank";
+                otherBank = "south bank";
+            }
+            else
+            {
+                currentBank = "south bank";
+                otherBank = "north bank";
+            }
+        }
+
         public String CheckBanks()
         {
             String msg ="";
