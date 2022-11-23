@@ -1,7 +1,11 @@
+using System.Collections;
+
 namespace Charles_Assignment8
 {
     public partial class Form1 : Form
     {
+
+        ArrayList listOChildren = new ArrayList();
         public Form1()
         {
             InitializeComponent();
@@ -69,6 +73,15 @@ namespace Charles_Assignment8
         private void ultFrisRdBtn_CheckedChanged(object sender, EventArgs e)
         {
             SetNewImage();
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            Child child = new Child(nameTxtBx.Text, addressTxtBx.Text);
+            listOChildren.Add(child);
+
+            MessageBox.Show(((Child)listOChildren[0]).Name + "\t" + ((Child)listOChildren[0]).Sport);
+
         }
     }
 }
