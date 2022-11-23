@@ -14,8 +14,11 @@ namespace Charles_Assignment8
         public String Address { get; set; }
         public String Sport { get; set; }
 
-        public Child(String name, String sport) {
+        public Child(String name, String address, String city, String state, String sport) {
             this.Name = name;
+            this.Address = address;
+            this.City = city;
+            this.State = state;
             this.Sport = sport;
         }
     }

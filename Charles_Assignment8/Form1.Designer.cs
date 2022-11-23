@@ -72,7 +72,7 @@
             this.ultFrisRdBtn.Location = new System.Drawing.Point(6, 122);
             this.ultFrisRdBtn.Name = "ultFrisRdBtn";
             this.ultFrisRdBtn.Size = new System.Drawing.Size(147, 25);
-            this.ultFrisRdBtn.TabIndex = 4;
+            this.ultFrisRdBtn.TabIndex = 8;
             this.ultFrisRdBtn.TabStop = true;
             this.ultFrisRdBtn.Text = "Ultimate Frisbee";
             this.ultFrisRdBtn.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.fieldHocRdBtn.Location = new System.Drawing.Point(6, 22);
             this.fieldHocRdBtn.Name = "fieldHocRdBtn";
             this.fieldHocRdBtn.Size = new System.Drawing.Size(122, 25);
-            this.fieldHocRdBtn.TabIndex = 3;
+            this.fieldHocRdBtn.TabIndex = 4;
             this.fieldHocRdBtn.TabStop = true;
             this.fieldHocRdBtn.Text = "Field Hockey";
             this.fieldHocRdBtn.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.sftBallRdBtn.Location = new System.Drawing.Point(6, 97);
             this.sftBallRdBtn.Name = "sftBallRdBtn";
             this.sftBallRdBtn.Size = new System.Drawing.Size(85, 25);
-            this.sftBallRdBtn.TabIndex = 2;
+            this.sftBallRdBtn.TabIndex = 7;
             this.sftBallRdBtn.TabStop = true;
             this.sftBallRdBtn.Text = "Softball";
             this.sftBallRdBtn.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.bladeRdBtn.Location = new System.Drawing.Point(6, 47);
             this.bladeRdBtn.Name = "bladeRdBtn";
             this.bladeRdBtn.Size = new System.Drawing.Size(126, 25);
-            this.bladeRdBtn.TabIndex = 1;
+            this.bladeRdBtn.TabIndex = 5;
             this.bladeRdBtn.TabStop = true;
             this.bladeRdBtn.Text = "Rollerblading";
             this.bladeRdBtn.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.skateRdBtn.Location = new System.Drawing.Point(6, 72);
             this.skateRdBtn.Name = "skateRdBtn";
             this.skateRdBtn.Size = new System.Drawing.Size(135, 25);
-            this.skateRdBtn.TabIndex = 0;
+            this.skateRdBtn.TabIndex = 6;
             this.skateRdBtn.TabStop = true;
             this.skateRdBtn.Text = "Skateboarding";
             this.skateRdBtn.UseVisualStyleBackColor = true;
@@ -196,43 +196,47 @@
             this.cityTxtBx.Location = new System.Drawing.Point(286, 134);
             this.cityTxtBx.Name = "cityTxtBx";
             this.cityTxtBx.Size = new System.Drawing.Size(219, 23);
-            this.cityTxtBx.TabIndex = 8;
+            this.cityTxtBx.TabIndex = 2;
             // 
             // addressTxtBx
             // 
             this.addressTxtBx.Location = new System.Drawing.Point(286, 105);
             this.addressTxtBx.Name = "addressTxtBx";
             this.addressTxtBx.Size = new System.Drawing.Size(219, 23);
-            this.addressTxtBx.TabIndex = 9;
+            this.addressTxtBx.TabIndex = 1;
             // 
             // nameTxtBx
             // 
             this.nameTxtBx.Location = new System.Drawing.Point(286, 76);
             this.nameTxtBx.Name = "nameTxtBx";
             this.nameTxtBx.Size = new System.Drawing.Size(219, 23);
-            this.nameTxtBx.TabIndex = 10;
+            this.nameTxtBx.TabIndex = 0;
             // 
             // stateCmboBx
             // 
             this.stateCmboBx.FormattingEnabled = true;
+            this.stateCmboBx.ItemHeight = 15;
             this.stateCmboBx.Location = new System.Drawing.Point(588, 134);
             this.stateCmboBx.Name = "stateCmboBx";
             this.stateCmboBx.Size = new System.Drawing.Size(69, 23);
-            this.stateCmboBx.TabIndex = 11;
+            this.stateCmboBx.TabIndex = 3;
             // 
             // captionTxtBx
             // 
             this.captionTxtBx.Location = new System.Drawing.Point(471, 354);
             this.captionTxtBx.Name = "captionTxtBx";
+            this.captionTxtBx.ReadOnly = true;
             this.captionTxtBx.Size = new System.Drawing.Size(265, 23);
             this.captionTxtBx.TabIndex = 12;
+            this.captionTxtBx.TabStop = false;
+            this.captionTxtBx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // registerBtn
             // 
             this.registerBtn.Location = new System.Drawing.Point(267, 403);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(216, 35);
-            this.registerBtn.TabIndex = 13;
+            this.registerBtn.TabIndex = 9;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
@@ -258,6 +262,7 @@
             this.Controls.Add(this.lessonChoiceGrpBx);
             this.Name = "Form1";
             this.Text = "CW: Sports Registration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.lessonChoiceGrpBx.ResumeLayout(false);
             this.lessonChoiceGrpBx.PerformLayout();

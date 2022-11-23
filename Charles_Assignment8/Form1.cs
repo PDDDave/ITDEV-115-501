@@ -1,4 +1,5 @@
 using System.Collections;
+using System.DirectoryServices;
 
 namespace Charles_Assignment8
 {
@@ -6,6 +7,7 @@ namespace Charles_Assignment8
     {
 
         ArrayList listOChildren = new ArrayList();
+        Utilities utilities = new Utilities();
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +60,12 @@ namespace Charles_Assignment8
         private void Form1_Load(object sender, EventArgs e)
         {
             SetDefaultImage();
+            stateCmboBx.Items.Add("WI");
+            stateCmboBx.Items.Add("MI");
+            stateCmboBx.Items.Add("IL");
+            stateCmboBx.Items.Add("MN");
+            stateCmboBx.Items.Add("IA");
+            stateCmboBx.Items.Add("NE");
         }
 
         private void SetDefaultImage()
@@ -77,11 +85,52 @@ namespace Charles_Assignment8
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Child child = new Child(nameTxtBx.Text, addressTxtBx.Text);
+            //check that boxes are not empty
+            if (nameTxtBx.Text != string.Empty || addressTxtBx.Text != string.Empty || string.IsNullOrEmpty(stateCmboBx.Text)) 
+            {
+                CreateChild();
+                ResetForm();
+            } else {
+                MessageBox.Show("Please ensure all fields are completley filled out!","Form Error!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void ResetForm()
+        {
+            utilities.ResetControlls(this);
+        }
+
+        private void CreateChild()
+        {
+            String sport = "";
+
+            if (skateRdBtn.Checked) { sport = "Skateboarding"; } else
+            if (fieldHocRdBtn.Checked) { sport = "Field Hockey"; } else
+            if (bladeRdBtn.Checked) { sport = "Rollerblading"; } else
+            if (sftBallRdBtn.Checked) { sport = "Softball";  } else
+            { sport = "Ultimate Frisbee"; }
+
+            Child child = new Child(nameTxtBx.Text, addressTxtBx.Text, cityTxtBx.Text, stateCmboBx.Text, sport);
             listOChildren.Add(child);
+        }
 
-            MessageBox.Show(((Child)listOChildren[0]).Name + "\t" + ((Child)listOChildren[0]).Sport);
+        private String PrintList() {
+            String msg = "";
 
+            for (int i = 0; i < listOChildren.Count; i++) {
+                msg += ((Child)listOChildren[i]).Name + "\t" + ((Child)listOChildren[i]).Sport + "\n";
+            }
+
+            return msg;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (listOChildren.Count > 0) {
+                Form2 form2 = new Form2(listOChildren);
+                form2.ShowDialog();
+            }
         }
     }
 }

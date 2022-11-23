@@ -16,3 +16,4 @@ C:\Code\ITDEV-115-501\Charles_Assignment8\obj\Debug\net6.0-windows\refint\Charle
 C:\Code\ITDEV-115-501\Charles_Assignment8\obj\Debug\net6.0-windows\Charles_Assignment8.pdb
 C:\Code\ITDEV-115-501\Charles_Assignment8\obj\Debug\net6.0-windows\Charles_Assignment8.genruntimeconfig.cache
 C:\Code\ITDEV-115-501\Charles_Assignment8\obj\Debug\net6.0-windows\ref\Charles_Assignment8.dll
+C:\Code\ITDEV-115-501\Charles_Assignment8\obj\Debug\net6.0-windows\Charles_Assignment8.Form2.resources
