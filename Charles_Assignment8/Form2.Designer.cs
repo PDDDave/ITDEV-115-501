@@ -32,6 +32,7 @@
             this.registeredLstBx = new System.Windows.Forms.ListBox();
             this.childLbl = new System.Windows.Forms.Label();
             this.sportLbl = new System.Windows.Forms.Label();
+            this.sportLstBx = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // titleLbl
@@ -46,18 +47,19 @@
             // 
             // registeredLstBx
             // 
+            this.registeredLstBx.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.registeredLstBx.FormattingEnabled = true;
-            this.registeredLstBx.ItemHeight = 15;
-            this.registeredLstBx.Location = new System.Drawing.Point(40, 114);
+            this.registeredLstBx.ItemHeight = 25;
+            this.registeredLstBx.Location = new System.Drawing.Point(144, 117);
             this.registeredLstBx.Name = "registeredLstBx";
-            this.registeredLstBx.Size = new System.Drawing.Size(721, 259);
+            this.registeredLstBx.Size = new System.Drawing.Size(168, 254);
             this.registeredLstBx.TabIndex = 1;
             // 
             // childLbl
             // 
             this.childLbl.AutoSize = true;
             this.childLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.childLbl.Location = new System.Drawing.Point(92, 90);
+            this.childLbl.Location = new System.Drawing.Point(175, 93);
             this.childLbl.Name = "childLbl";
             this.childLbl.Size = new System.Drawing.Size(94, 21);
             this.childLbl.TabIndex = 2;
@@ -67,11 +69,21 @@
             // 
             this.sportLbl.AutoSize = true;
             this.sportLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sportLbl.Location = new System.Drawing.Point(562, 90);
+            this.sportLbl.Location = new System.Drawing.Point(500, 93);
             this.sportLbl.Name = "sportLbl";
             this.sportLbl.Size = new System.Drawing.Size(133, 21);
             this.sportLbl.TabIndex = 3;
             this.sportLbl.Text = "Registered sport";
+            // 
+            // sportLstBx
+            // 
+            this.sportLstBx.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sportLstBx.FormattingEnabled = true;
+            this.sportLstBx.ItemHeight = 25;
+            this.sportLstBx.Location = new System.Drawing.Point(484, 117);
+            this.sportLstBx.Name = "sportLstBx";
+            this.sportLstBx.Size = new System.Drawing.Size(168, 254);
+            this.sportLstBx.TabIndex = 4;
             // 
             // Form2
             // 
@@ -79,6 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sportLstBx);
             this.Controls.Add(this.sportLbl);
             this.Controls.Add(this.childLbl);
             this.Controls.Add(this.registeredLstBx);
@@ -97,5 +110,6 @@
         private ListBox registeredLstBx;
         private Label childLbl;
         private Label sportLbl;
+        private ListBox sportLstBx;
     }
 }

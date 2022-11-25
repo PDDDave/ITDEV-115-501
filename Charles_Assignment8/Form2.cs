@@ -23,13 +23,18 @@ namespace Charles_Assignment8
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            String msg;
+            String child;
+            String sport;
+
             for(int i =0; i < registeredChildren.Count; i++)
             {
-                msg = "";
-                msg = ((Child)registeredChildren[i]).Name + "\t" + ((Child)registeredChildren[i]).Sport;
 
-                registeredLstBx.Items.Add(msg);
+                child = ((Child)registeredChildren[i]).Name;
+                sport = ((Child)registeredChildren[i]).Sport;
+
+
+                registeredLstBx.Items.Add(child);
+                sportLstBx.Items.Add(sport);
             }
         }
     }
