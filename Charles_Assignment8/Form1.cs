@@ -59,13 +59,16 @@ namespace Charles_Assignment8
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetDefaultImage();
+            
             stateCmboBx.Items.Add("WI");
             stateCmboBx.Items.Add("MI");
             stateCmboBx.Items.Add("IL");
             stateCmboBx.Items.Add("MN");
             stateCmboBx.Items.Add("IA");
             stateCmboBx.Items.Add("NE");
+
+            fieldHocRdBtn.Checked = true;
+            stateCmboBx.Text = "WI";
         }
 
         private void SetDefaultImage()
@@ -86,7 +89,7 @@ namespace Charles_Assignment8
         private void registerBtn_Click(object sender, EventArgs e)
         {
             //check that boxes are not empty
-            if (nameTxtBx.Text != string.Empty || addressTxtBx.Text != string.Empty || string.IsNullOrEmpty(stateCmboBx.Text)) 
+            if (nameTxtBx.Text != string.Empty || addressTxtBx.Text != string.Empty) 
             {
                 CreateChild();
                 ResetForm();
@@ -99,17 +102,24 @@ namespace Charles_Assignment8
         private void ResetForm()
         {
             utilities.ResetControlls(this);
+            fieldHocRdBtn.Checked = true;
+            nameTxtBx.Focus();
         }
 
         private void CreateChild()
         {
             String sport = "";
 
-            if (skateRdBtn.Checked) { sport = "Skateboarding"; } else
-            if (fieldHocRdBtn.Checked) { sport = "Field Hockey"; } else
-            if (bladeRdBtn.Checked) { sport = "Rollerblading"; } else
-            if (sftBallRdBtn.Checked) { sport = "Softball";  } else
-            { sport = "Ultimate Frisbee"; }
+            if (skateRdBtn.Checked) { sport = "Skateboarding"; }
+            else
+            if (fieldHocRdBtn.Checked) { sport = "Field Hockey"; }
+            else
+            if (bladeRdBtn.Checked) { sport = "Rollerblading"; }
+            else
+            if (sftBallRdBtn.Checked) { sport = "Softball"; }
+            else
+            if (ultFrisRdBtn.Checked) { sport = "Ultimate Frisbee"; }
+
 
             Child child = new Child(nameTxtBx.Text, addressTxtBx.Text, cityTxtBx.Text, stateCmboBx.Text, sport);
             listOChildren.Add(child);

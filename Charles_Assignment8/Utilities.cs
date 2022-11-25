@@ -35,6 +35,12 @@ namespace Charles_Assignment8
                     ListBox listBox = (ListBox)control;
                     listBox.ClearSelected();
                 }
+
+                if (control is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)control;
+                    radioButton.Checked = false;
+                }
             }
         }
     }

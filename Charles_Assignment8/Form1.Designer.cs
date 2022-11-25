@@ -61,7 +61,7 @@
             this.lessonChoiceGrpBx.Location = new System.Drawing.Point(22, 200);
             this.lessonChoiceGrpBx.Name = "lessonChoiceGrpBx";
             this.lessonChoiceGrpBx.Size = new System.Drawing.Size(168, 152);
-            this.lessonChoiceGrpBx.TabIndex = 0;
+            this.lessonChoiceGrpBx.TabIndex = 99;
             this.lessonChoiceGrpBx.TabStop = false;
             this.lessonChoiceGrpBx.Text = "Sporting Events";
             // 
@@ -73,7 +73,6 @@
             this.ultFrisRdBtn.Name = "ultFrisRdBtn";
             this.ultFrisRdBtn.Size = new System.Drawing.Size(147, 25);
             this.ultFrisRdBtn.TabIndex = 8;
-            this.ultFrisRdBtn.TabStop = true;
             this.ultFrisRdBtn.Text = "Ultimate Frisbee";
             this.ultFrisRdBtn.UseVisualStyleBackColor = true;
             this.ultFrisRdBtn.CheckedChanged += new System.EventHandler(this.ultFrisRdBtn_CheckedChanged);
@@ -86,7 +85,6 @@
             this.fieldHocRdBtn.Name = "fieldHocRdBtn";
             this.fieldHocRdBtn.Size = new System.Drawing.Size(122, 25);
             this.fieldHocRdBtn.TabIndex = 4;
-            this.fieldHocRdBtn.TabStop = true;
             this.fieldHocRdBtn.Text = "Field Hockey";
             this.fieldHocRdBtn.UseVisualStyleBackColor = true;
             this.fieldHocRdBtn.CheckedChanged += new System.EventHandler(this.fieldHocRdBtn_CheckedChanged);
@@ -99,7 +97,6 @@
             this.sftBallRdBtn.Name = "sftBallRdBtn";
             this.sftBallRdBtn.Size = new System.Drawing.Size(85, 25);
             this.sftBallRdBtn.TabIndex = 7;
-            this.sftBallRdBtn.TabStop = true;
             this.sftBallRdBtn.Text = "Softball";
             this.sftBallRdBtn.UseVisualStyleBackColor = true;
             this.sftBallRdBtn.CheckedChanged += new System.EventHandler(this.sftBallRdBtn_CheckedChanged);
@@ -112,7 +109,6 @@
             this.bladeRdBtn.Name = "bladeRdBtn";
             this.bladeRdBtn.Size = new System.Drawing.Size(126, 25);
             this.bladeRdBtn.TabIndex = 5;
-            this.bladeRdBtn.TabStop = true;
             this.bladeRdBtn.Text = "Rollerblading";
             this.bladeRdBtn.UseVisualStyleBackColor = true;
             this.bladeRdBtn.CheckedChanged += new System.EventHandler(this.bladeRdBtn_CheckedChanged);
@@ -125,7 +121,6 @@
             this.skateRdBtn.Name = "skateRdBtn";
             this.skateRdBtn.Size = new System.Drawing.Size(135, 25);
             this.skateRdBtn.TabIndex = 6;
-            this.skateRdBtn.TabStop = true;
             this.skateRdBtn.Text = "Skateboarding";
             this.skateRdBtn.UseVisualStyleBackColor = true;
             this.skateRdBtn.CheckedChanged += new System.EventHandler(this.skateRdBtn_CheckedChanged);

@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\David\\.nuget\\packages\\": {},
+    "C:\\Users\\vvard\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\ITDEV-115-501\\Charles_Assignment8\\Charles_Assignment8.csproj",
+      "projectUniqueName": "F:\\Code\\School\\MATC\\itdev115\\Charles_Assignment8\\Charles_Assignment8.csproj",
       "projectName": "Charles_Assignment8",
-      "projectPath": "C:\\Code\\ITDEV-115-501\\Charles_Assignment8\\Charles_Assignment8.csproj",
-      "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\ITDEV-115-501\\Charles_Assignment8\\obj\\",
+      "projectPath": "F:\\Code\\School\\MATC\\itdev115\\Charles_Assignment8\\Charles_Assignment8.csproj",
+      "packagesPath": "C:\\Users\\vvard\\.nuget\\packages\\",
+      "outputPath": "F:\\Code\\School\\MATC\\itdev115\\Charles_Assignment8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vvard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
