@@ -1,0 +1,15 @@
+F:\Code\School\MATC\itdev115\Charles_Assignment9\bin\Debug\net6.0\Charles_Assignment9.exe
+F:\Code\School\MATC\itdev115\Charles_Assignment9\bin\Debug\net6.0\Charles_Assignment9.deps.json
+F:\Code\School\MATC\itdev115\Charles_Assignment9\bin\Debug\net6.0\Charles_Assignment9.runtimeconfig.json
+F:\Code\School\MATC\itdev115\Charles_Assignment9\bin\Debug\net6.0\Charles_Assignment9.dll
+F:\Code\School\MATC\itdev115\Charles_Assignment9\bin\Debug\net6.0\Charles_Assignment9.pdb
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.csproj.AssemblyReference.cache
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.AssemblyInfoInputs.cache
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.AssemblyInfo.cs
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.csproj.CoreCompileInputs.cache
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.dll
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\refint\Charles_Assignment9.dll
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.pdb
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\Charles_Assignment9.genruntimeconfig.cache
+F:\Code\School\MATC\itdev115\Charles_Assignment9\obj\Debug\net6.0\ref\Charles_Assignment9.dll
