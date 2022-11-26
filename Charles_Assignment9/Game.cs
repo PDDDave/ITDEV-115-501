@@ -1,5 +1,6 @@
 ﻿using Charles_Assignment9;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -114,12 +115,15 @@ namespace OnePlayerTicTacToe
 
            
                 userselection = playerX.MakeMove(gameBoard, userselection, playerX);
+                playerX.Pieces[userselection] = true;
+                gameBoard.OpenPositions.Remove(userselection);
 
             }
             else
             {
                 userselection = playerO.MakeMove(gameBoard, -1, playerX);
-
+                playerO.Pieces[userselection] = true;
+                gameBoard.OpenPositions.Remove(userselection);
             }
 
             Console.Clear();
