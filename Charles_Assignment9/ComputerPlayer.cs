@@ -33,13 +33,17 @@ namespace Charles_Assignment9
         {
             BitArray humanMoves = aPlayer.Pieces;
             selection = FLAG;
+
+            selection = EvalPC(gameBoard);
+
             
 
-            selection = EvalHuman(humanMoves,gameBoard);
+            if (selection == FLAG) {
+                selection = EvalHuman(humanMoves, gameBoard);
+            }
 
             if (selection == FLAG) {
                 selection = BestMove(gameBoard);
-                //selection = EvalPC(gameBoard);
             }
 
 
@@ -64,29 +68,83 @@ namespace Charles_Assignment9
 
         }
 
-        private int EvalHuman(BitArray humanMoves, Board gameboard) {
-            //check if computer wins, if so make that move
-            //need to gather the moves that the player has made and then test to see if the winning combinations are inside.
+        private int EvalPC(Board gameBoard) {
 
+            if (this.Pieces[0]) 
+            {
+                selection = PrimeCheck(gameBoard, this.Pieces, zeroWinCombos);
+            }
+
+            if (selection == FLAG) {
+                if (this.Pieces[1]) {
+                    selection = PrimeCheck(gameBoard, this.Pieces, oneWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[2])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, twoWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[3])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, threeWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[4])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, fourWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[5])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, fiveWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[6])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, sixWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[7])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, sevenWinCombos);
+                }
+            }
+
+            if (selection == FLAG)
+            {
+                if (this.Pieces[8])
+                {
+                    selection = PrimeCheck(gameBoard, this.Pieces, eightWinCombos);
+                }
+            }
+
+            return selection;
+        }
+
+        private int EvalHuman(BitArray humanMoves, Board gameboard) {
             //check zero win combos {0}
             if (humanMoves[0])
             {
                 selection = PrimeCheck(gameboard, humanMoves, zeroWinCombos);
-
-                /*
-                 //check {0, 1, 2}
-                 selection = SubCheck(gameBoard,humanMoves,1,2);
-
-                if (selection == FLAG) {
-                    //if no move was made, check the next 0 win combination {0,3,6}
-                    selection = SubCheck(gameBoard, humanMoves, 3,6);
-                }
-
-                if (selection == FLAG)
-                {
-                    //{0, 4, 8}
-                    selection = SubCheck(gameBoard, humanMoves, 4, 8);
-                } */
 
             }
 
@@ -104,23 +162,16 @@ namespace Charles_Assignment9
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[2])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, twoWinCombos);
                 }
 
             }
-
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[3])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, threeWinCombos);
                 }
 
@@ -128,62 +179,42 @@ namespace Charles_Assignment9
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[4])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, fourWinCombos);
                 }
-
             }
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[5])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, fiveWinCombos);
                 }
-
             }
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[6])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, sixWinCombos);
                 }
-
             }
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[7])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, sevenWinCombos);
                 }
-
             }
 
             if (selection == FLAG)
             {
-                //if no move was made, move onto next win combo sequence
-
                 if (humanMoves[8])
                 {
-
                     selection = PrimeCheck(gameboard, humanMoves, eightWinCombos);
                 }
-
             }
 
             //check if human wins, if so  make move to block
