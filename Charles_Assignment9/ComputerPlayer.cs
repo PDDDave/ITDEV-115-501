@@ -38,6 +38,7 @@ namespace Charles_Assignment9
 
             
 
+
             if (selection == FLAG) {
                 selection = EvalHuman(humanMoves, gameBoard);
             }
