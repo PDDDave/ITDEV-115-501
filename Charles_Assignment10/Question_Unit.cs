@@ -8,5 +8,9 @@ namespace Charles_Assignment10
 {
     internal class Question_Unit
     {
+        private String Question { get; set; }
+        private String Answer { get; set; }
+        private String Explanation { get; set; }
+        private String CorrectAnswer { get; set; }
     }
 }

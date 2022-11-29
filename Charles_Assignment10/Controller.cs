@@ -8,5 +8,18 @@ namespace Charles_Assignment10
 {
     internal class Controller
     {
+
+        private void Welcome()
+        {
+
+        }
+
+        public void Play() { 
+        
+        }
+
+        private void PlayAgain() { }
+
+
     }
 }
