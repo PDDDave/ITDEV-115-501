@@ -1,0 +1,15 @@
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.csproj.AssemblyReference.cache
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.AssemblyInfoInputs.cache
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.AssemblyInfo.cs
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.csproj.CoreCompileInputs.cache
+F:\Code\School\MATC\itdev115\Charles_Final\bin\Debug\net6.0\Charles_Final.exe
+F:\Code\School\MATC\itdev115\Charles_Final\bin\Debug\net6.0\Charles_Final.deps.json
+F:\Code\School\MATC\itdev115\Charles_Final\bin\Debug\net6.0\Charles_Final.runtimeconfig.json
+F:\Code\School\MATC\itdev115\Charles_Final\bin\Debug\net6.0\Charles_Final.dll
+F:\Code\School\MATC\itdev115\Charles_Final\bin\Debug\net6.0\Charles_Final.pdb
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.dll
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\refint\Charles_Final.dll
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.pdb
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\Charles_Final.genruntimeconfig.cache
+F:\Code\School\MATC\itdev115\Charles_Final\obj\Debug\net6.0\ref\Charles_Final.dll
