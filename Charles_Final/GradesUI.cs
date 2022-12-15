@@ -8,7 +8,7 @@ namespace Charles_Final
 {
     internal class GradesUI
     {
-        StudentS myStudentS;
+        StudentS myStudentS = new StudentS();
 
         public void MainMethod()
         {
@@ -18,11 +18,15 @@ namespace Charles_Final
             //if successfull call DisplayInfo()
             //else display error message.
 
+            myStudentS.PopulateStudents("grades.txt");
+            Info info = new Info();
+            info.DisplayInfo("Final Application");
+            DisplayInfo();
         }
 
         void DisplayInfo()
         {
-            Console.WriteLine("Student id\tLast Name\tAverage  \tGrade");
+            Console.WriteLine("Student id\tLast Name\tAverage  \tGrade\n");
 
             for (int index = 0; index < myStudentS.ListLength; index++)
             {
